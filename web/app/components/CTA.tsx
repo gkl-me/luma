@@ -98,58 +98,7 @@ export default function CTA() {
             Be among the first to upload, parse, and listen. We&apos;re launching Phase 1 soon.
           </motion.p>
 
-          {/* Email form */}
-          <motion.form
-            initial={{ opacity: 0, y: 25 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.35 }}
-            onSubmit={(e) => e.preventDefault()}
-            className="flex flex-col sm:flex-row gap-0 w-full max-w-lg"
-          >
-            <input
-              type="email"
-              id="cta-email"
-              placeholder="your@email.com"
-              required
-              className="flex-1 px-5 py-4 text-base outline-none"
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                background: "#FAFAFA",
-                color: "#0A0A0A",
-                border: "2.5px solid #FFD60A",
-                borderRight: "0",
-              }}
-            />
-            <motion.button
-              type="submit"
-              whileHover={{ x: -3, y: -3, boxShadow: "8px 8px 0px #FFD60A" }}
-              whileTap={{ x: 1, y: 1, boxShadow: "2px 2px 0px #FFD60A" }}
-              transition={{ duration: 0.1 }}
-              className="px-8 py-4 font-bold text-base"
-              style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                background: "linear-gradient(135deg, #FFD60A 0%, #FF6B2B 100%)",
-                color: "#0A0A0A",
-                border: "2.5px solid #FFD60A",
-                boxShadow: "5px 5px 0px #FFD60A",
-                cursor: "pointer",
-                whiteSpace: "nowrap",
-              }}
-            >
-              Get Access →
-            </motion.button>
-          </motion.form>
-
-          {/* Social proof / note */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="text-xs"
-            style={{ fontFamily: "'Space Mono', monospace", color: "#554E6A" }}
-          >
-            No credit card. No spam. Just early access.
-          </motion.p>
+        
         </motion.div>
       </div>
     </section>

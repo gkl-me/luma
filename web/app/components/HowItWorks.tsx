@@ -114,9 +114,9 @@ export default function HowItWorks() {
                 style={{
                   background: step.color,
                   border: "2.5px solid #0A0A0A",
-                  borderBottom: index < steps.length - 1 ? "0" : "2.5px solid #0A0A0A",
+                  borderBottom: "0",
                   minWidth: "120px",
-                  padding: "2rem 1.5rem",
+                  padding: "1.5rem",
                 }}
               >
                 <span
@@ -135,9 +135,9 @@ export default function HowItWorks() {
                 style={{
                   background: "#FAFAFA",
                   border: "2.5px solid #0A0A0A",
-                  borderLeft: "0",
+                  borderTop: "0",
                   borderBottom: index < steps.length - 1 ? "0" : "2.5px solid #0A0A0A",
-                  padding: "2rem 2.5rem",
+                  padding: "1.5rem 2rem",
                 }}
               >
                 <h3
@@ -158,7 +158,7 @@ export default function HowItWorks() {
                 </p>
               </motion.div>
 
-              {/* Arrow column */}
+              {/* Arrow column — desktop only */}
               <div
                 className="hidden md:flex items-center justify-center"
                 style={{

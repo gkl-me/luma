@@ -4,6 +4,15 @@
  * All visual design decisions should live here.
  */
 
+// ─── Site Config ──────────────────────────────────────────────────────────────
+
+export const siteConfig = {
+  name: "Luma",
+  tagline: "PDFs that listen back.",
+  githubUrl: "https://github.com/gkl-me/luma",
+  appUrl: "/app",
+} as const;
+
 // ─── Color Palette ──────────────────────────────────────────────────────────
 
 export const colors = {

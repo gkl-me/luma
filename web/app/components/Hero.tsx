@@ -2,6 +2,7 @@
 
 import { motion, type Variants } from "framer-motion";
 import Marquee from "./Marquee";
+import { siteConfig } from "@/data/design";
 
 const container: Variants = {
   hidden: {},
@@ -108,11 +109,11 @@ export default function Hero() {
             className="flex flex-wrap items-center justify-center gap-4 mt-2"
           >
             <motion.a
-              href="#cta"
+              href={siteConfig.appUrl}
               whileHover={{ x: -3, y: -3, boxShadow: "8px 8px 0px #0A0A0A" }}
               whileTap={{ x: 1, y: 1, boxShadow: "2px 2px 0px #0A0A0A" }}
               transition={{ duration: 0.1 }}
-              className="px-8 py-4 font-bold text-base no-underline"
+              className="w-full sm:w-auto px-8 py-4 font-bold text-base no-underline text-center"
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
                 background: "linear-gradient(135deg, #FFD60A 0%, #FF6B2B 100%)",
@@ -122,7 +123,7 @@ export default function Hero() {
                 display: "inline-block",
               }}
             >
-              Get Early Access →
+              Try it Free →
             </motion.a>
 
             <motion.a
@@ -130,7 +131,7 @@ export default function Hero() {
               whileHover={{ x: -2, y: -2, boxShadow: "6px 6px 0px #0A0A0A" }}
               whileTap={{ x: 1, y: 1, boxShadow: "2px 2px 0px #0A0A0A" }}
               transition={{ duration: 0.1 }}
-              className="px-8 py-4 font-bold text-base no-underline"
+              className="w-full sm:w-auto px-8 py-4 font-bold text-base no-underline text-center"
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
                 background: "transparent",
@@ -157,9 +158,10 @@ export default function Hero() {
                 background: "#0A0A0A",
                 border: "2.5px solid #0A0A0A",
                 boxShadow: "8px 8px 0px #FFD60A",
-                padding: "1.5rem 2rem",
+                padding: "1rem 1.25rem",
                 borderRadius: 0,
               }}
+              className="sm:p-8"
             >
               {/* Fake browser bar */}
               <div className="flex items-center gap-2 mb-4">
@@ -180,9 +182,9 @@ export default function Hero() {
               </div>
 
               {/* Fake UI content */}
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col sm:flex-row items-start gap-3">
                 {/* Chapter list */}
-                <div className="flex-1 flex flex-col gap-2">
+                <div className="flex-1 flex flex-col gap-2 w-full">
                   <p style={{ fontFamily: "'Space Mono', monospace", color: "#888", fontSize: "0.65rem", marginBottom: "0.25rem" }}>
                     CHAPTERS — lecture_notes.pdf
                   </p>
@@ -210,9 +212,9 @@ export default function Hero() {
                   )}
                 </div>
 
-                {/* Player */}
+                {/* Player — hidden on mobile, visible sm+ */}
                 <div
-                  className="flex flex-col items-center gap-3 px-4 py-3"
+                  className="hidden sm:flex flex-col items-center gap-3 px-4 py-3"
                   style={{
                     background: "#1A1A1A",
                     border: "1.5px solid #333",
