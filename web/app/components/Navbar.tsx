@@ -87,7 +87,7 @@ export default function Navbar() {
 
             {/* Desktop CTA */}
             <motion.a
-              href="#cta"
+              href="/app"
               whileHover={{ x: -2, y: -2, boxShadow: "6px 6px 0px #0A0A0A" }}
               whileTap={{ x: 1, y: 1, boxShadow: "2px 2px 0px #0A0A0A" }}
               transition={{ duration: 0.1 }}
@@ -168,7 +168,7 @@ export default function Navbar() {
                 ))}
 
                 <motion.a
-                  href="#cta"
+                  href="/app"
                   onClick={() => setMenuOpen(false)}
                   whileHover={{ x: -2, y: -2, boxShadow: "6px 6px 0px #0A0A0A" }}
                   whileTap={{ x: 1, y: 1 }}
